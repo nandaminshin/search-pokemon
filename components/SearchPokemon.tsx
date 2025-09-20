@@ -17,11 +17,9 @@ export default function SearchPokemon() {
         e.preventDefault();
         const trimmed = searchValue.trim();
         if (!trimmed) {
-            // remove param
             router.push('/search');
             return;
         }
-        // update query param (push so history is preserved)
         router.push(`/search?name=${encodeURIComponent(trimmed)}`);
     }
 

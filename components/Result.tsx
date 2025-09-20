@@ -3,11 +3,17 @@
 import React, { useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { Pokemon, PokemonData, PokemonVars } from '@/type/pokemon';
+import client from '@/lib/apolloClient';
+import { GET_POKEMON } from '@/graphql/queries';
 
 export default function Result({ pokemon }: { pokemon: Pokemon | null }) {
     const router = useRouter();
 
     const viewEvolution = (name: string) => {
+        client.query({
+            query: GET_POKEMON,
+            variables: { name },
+        });
         router.push(`/search?name=${encodeURIComponent(name)}`);
     };
 
