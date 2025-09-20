@@ -40,3 +40,10 @@ export type PokemonData = {
 export type PokemonVars = {
     name: string;
 };
+
+export type PokemonBasic = {
+    id: string;
+    number: string;
+    name: string;
+    image?: string;
+}
