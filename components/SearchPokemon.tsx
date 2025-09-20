@@ -23,7 +23,7 @@ export default function SearchPokemon() {
         client
             .query<{ pokemons: PokemonBasic[] }>({
                 query: GET_POKEMON_LIST,
-                variables: { first: 151 }, // or higher for more gens
+                variables: { first: 151 },
             })
             .then((res) => {
                 if (res.data && res.data.pokemons) {
@@ -82,7 +82,7 @@ export default function SearchPokemon() {
                 />
                 <button
                     type="submit"
-                    className="px-3 py-2 border rounded bg-orange-600 text-white hover:bg-orange-700"
+                    className="px-3 py-2 border rounded-md bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:bg-gradient-to-r from-purple-600 to-indigo-700"
                 >
                     Search
                 </button>
