@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 tracking-tight"
                             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                         >
-                            Pokémon Search
+                            Search Pokémon
                         </h1>
                     </header>
                     <main className="flex-1 bg-slate-800/40 p-6 sm:p-8 rounded-xl shadow-2xl backdrop-blur-lg border border-slate-700">
